@@ -1,0 +1,38 @@
+RESUME – Kavitha Nair
+Location: Kochi, Kerala
+Email: kavitha.nair@email.com | Phone: +91-21098-76543
+
+SUMMARY
+PhD in Statistics with strong research background in Bayesian methods and time series.
+2 years of industry experience. Expert in R and Python for statistical modeling.
+
+SKILLS
+Statistics: Bayesian Inference, Time Series, Hypothesis Testing, Regression, ANOVA
+Programming: R (expert), Python, SAS, MATLAB
+ML: Statistical ML, Causal Inference, Survival Analysis
+Data: Pandas, NumPy, Tidyverse, ggplot2
+Visualization: R Shiny, ggplot2, Matplotlib
+Tools: Jupyter, RStudio, LaTeX, Git
+
+EXPERIENCE
+Data Scientist | Kerala Startup Mission (KSUM) | Kochi | 2023 – Present (1 year)
+- Built Bayesian demand forecasting model for agri-tech startup
+- Developed statistical A/B test framework used across 5 portfolio companies
+- Published 2 reports on Kerala startup ecosystem data
+
+Research Associate | IIT Madras | 2022 – 2023 (1 year)
+- Statistical analysis for government health scheme impact study
+- Co-authored paper on Bayesian hierarchical models for education data
+
+EDUCATION
+PhD in Statistics | University of Kerala | 2022
+M.Sc Statistics | IIT Madras | 2017 | CGPA: 9.0/10
+B.Sc Mathematics | MG University Kerala | 2015 | CGPA: 8.8/10
+
+PUBLICATIONS
+- "Bayesian Hierarchical Models for Educational Outcomes in India" – Sankhya 2022
+- "Time Series Forecasting for Agricultural Markets" – IJDS 2021
+
+CERTIFICATIONS
+- Python for Statistics (Coursera)
+- Causal Inference (MIT OpenCourseWare)

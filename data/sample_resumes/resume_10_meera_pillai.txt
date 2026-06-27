@@ -1,0 +1,47 @@
+RESUME – Meera Pillai
+Location: Bengaluru, Karnataka
+Email: meera.pillai@email.com | Phone: +91-09876-54321
+
+SUMMARY
+Data Scientist with 6 years of experience specializing in Computer Vision and Generative AI.
+Built CV systems deployed across retail, healthcare, and manufacturing.
+Expert in PyTorch, deep learning architecture design, and production deployment.
+
+SKILLS
+Computer Vision: Object Detection (YOLO, Faster-RCNN), Segmentation, OCR, Face Recognition
+Generative AI: Stable Diffusion, GANs, Diffusion Models, Image Generation
+ML: PyTorch (expert), TensorFlow, Keras, Scikit-learn
+Python: Expert (6+ years)
+SQL: Complex analytical queries
+Cloud: AWS (Rekognition, SageMaker), GCP (Vision AI, Vertex AI)
+MLOps: Docker, Kubernetes, TorchServe, ONNX, TensorRT
+NLP basics: BERT, text classification
+
+EXPERIENCE
+Senior Data Scientist – Computer Vision | Myntra (Flipkart Group) | Bengaluru | 2021 – Present
+- Built visual search system processing 5M fashion images (97% precision)
+- Developed try-on generation using diffusion models; increased conversion by 18%
+- Led CV team of 5 engineers; drove roadmap for AI-powered fashion discovery
+- Reduced inference cost by 65% via model quantization and distillation
+
+Data Scientist – CV | Niramai Health Analytix | Bengaluru | 2019 – 2021
+- Built breast cancer screening model from thermal images (93% sensitivity)
+- Deployed DICOM-compatible medical imaging pipeline
+- Worked with radiologists to validate model outputs
+
+ML Engineer | Robert Bosch India | 2018 – 2019
+- Defect detection system for automotive parts using CNN (99.2% accuracy)
+- Reduced human inspection time by 70%
+
+EDUCATION
+M.Tech in Computer Science | IISc Bengaluru | 2018 | CGPA: 9.3/10
+B.Tech in Electronics | NITK Surathkal | 2016 | CGPA: 8.7/10
+
+CERTIFICATIONS
+- Deep Learning Specialization (Coursera)
+- AWS Certified ML Specialty
+- NVIDIA Deep Learning Institute – Computer Vision
+
+PUBLICATIONS
+- "Efficient Visual Search at Scale" – CVPR Workshop 2022
+- "Thermal Imaging for Early Cancer Detection" – IEEE EMBC 2020

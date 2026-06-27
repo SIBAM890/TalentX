@@ -1,0 +1,35 @@
+RESUME – Ananya Das
+Location: Kolkata, West Bengal
+Email: ananya.das@email.com | Phone: +91-43210-98765
+
+SUMMARY
+Data Analyst with 2 years of experience. Proficient in SQL, Excel, and Python basics.
+Looking to grow into a data science role with ML focus.
+
+SKILLS
+Data Analysis: Excel (Advanced), SQL, Google Sheets
+Programming: Python (basic), R (basic)
+Visualization: Tableau, Power BI, Google Data Studio
+ML (Beginner): Scikit-learn basics, Linear Regression
+
+EXPERIENCE
+Data Analyst | EdTech Startup | Kolkata | 2023 – Present (1.5 years)
+- Analyzed student engagement data to improve course completion by 15%
+- Built Tableau dashboards for management team (weekly reporting)
+- Wrote complex SQL queries for business intelligence needs
+
+Business Analyst Intern | Capgemini | 2022 – 2023 (1 year)
+- Supported senior analysts with data gathering and Excel models
+- Prepared presentations for client stakeholders
+
+EDUCATION
+B.Sc in Statistics | Presidency University, Kolkata | 2022 | CGPA: 7.5/10
+
+CERTIFICATIONS
+- Google Data Analytics Certificate
+- SQL Bootcamp (Udemy)
+- Tableau Desktop Specialist
+
+PROJECTS
+- COVID-19 India Analysis: Data viz project using Python + Tableau
+- Sales Trend Analysis: SQL + Power BI dashboard

@@ -1,0 +1,39 @@
+RESUME – Rohan Joshi
+Location: Pune, Maharashtra
+Email: rohan.joshi@email.com | Phone: +91-32109-87654
+
+SUMMARY
+MLOps Engineer with 3 years of experience in deploying and maintaining ML systems in production.
+Expert in Docker, Kubernetes, MLflow, and cloud platforms. Bridges ML and DevOps.
+
+SKILLS
+MLOps: MLflow, DVC, Kubeflow, BentoML, Seldon Core, Evidently AI
+Cloud: AWS (SageMaker, EC2, S3, ECR), Azure ML
+Containers: Docker (expert), Kubernetes (expert), Helm, ArgoCD
+CI/CD: GitHub Actions, Jenkins, GitLab CI, CircleCI
+Monitoring: Prometheus, Grafana, Datadog, New Relic
+Programming: Python, Bash, Terraform, YAML
+ML Basics: Scikit-learn, feature engineering, model evaluation
+
+EXPERIENCE
+MLOps Engineer | PhonePe | Pune | 2022 – Present (2.5 years)
+- Managed ML platform serving 80+ models in production (99.95% uptime)
+- Reduced model deployment time from 2 weeks to 4 hours via automated pipelines
+- Implemented model monitoring catching 12 instances of data drift
+- Built internal MLOps tool adopted by 50+ data scientists
+
+DevOps Engineer | Persistent Systems | Pune | 2021 – 2022 (1 year)
+- Managed Kubernetes clusters for fintech client
+- Built CI/CD pipelines using GitHub Actions + ArgoCD
+
+EDUCATION
+B.E. in Computer Science | Pune University | 2021 | CGPA: 7.9/10
+
+CERTIFICATIONS
+- CKA (Certified Kubernetes Administrator)
+- AWS Solutions Architect Associate
+- MLflow Practitioner (Databricks)
+
+OPEN SOURCE
+- kubeflow-toolkit: 300+ GitHub stars
+- ml-monitor-py: Model monitoring library

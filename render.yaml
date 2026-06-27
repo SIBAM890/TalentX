@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: talentx-api
+    runtime: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python -m spacy download en_core_web_sm
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: SENTENCE_BERT_MODEL
+        value: all-MiniLM-L6-v2
+
+  - type: web
+    name: talentx-frontend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/app.py --server.port 10000 --server.address 0.0.0.0
+    envVars:
+      - key: API_BASE_URL
+        fromService:
+          type: web
+          name: talentx-api
+          property: host

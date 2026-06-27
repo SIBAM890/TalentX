@@ -1,0 +1,40 @@
+RESUME – Sneha Reddy
+Location: Chennai, Tamil Nadu
+Email: sneha.reddy@email.com | Phone: +91-65432-10987
+
+SUMMARY
+Software Engineer with 4 years of experience in Java backend development.
+Looking to transition into data science. Recently completed ML certification.
+Strong problem-solving skills and ability to learn quickly.
+
+SKILLS
+Programming: Java (expert), Python (intermediate), SQL
+Backend: Spring Boot, REST APIs, Microservices, Kafka
+ML (Learning): Pandas, NumPy, Scikit-learn, basic ML algorithms
+Cloud: AWS (EC2, S3, RDS) – certified
+Database: MySQL, PostgreSQL, MongoDB
+Tools: Git, JIRA, Docker, Jenkins
+
+EXPERIENCE
+Senior Software Engineer | Infosys | Chennai | 2021 – Present (3 years)
+- Built microservices architecture for banking platform serving 5M users
+- Optimized SQL queries reducing database load by 45%
+- Led a team of 6 engineers on BFSI integration project
+- Implemented Kafka-based event streaming pipeline
+
+Software Engineer | TCS | Chennai | 2020 – 2021 (1 year)
+- Developed REST APIs using Spring Boot for insurance domain
+- Wrote unit and integration tests achieving 85% code coverage
+
+EDUCATION
+B.E. in Computer Science | Anna University, Chennai | 2020 | CGPA: 8.0/10
+
+CERTIFICATIONS
+- AWS Certified Developer Associate
+- Machine Learning Specialization (Coursera) – In Progress
+- Oracle Java SE 11 Certified
+
+RECENT ML PROJECTS (Self-Learning)
+- Iris Classification: Scikit-learn ML project
+- Data Exploration: EDA on Titanic dataset (Kaggle)
+- SQL Analytics: Built sales analytics dashboard

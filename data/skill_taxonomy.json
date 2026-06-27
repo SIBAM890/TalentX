@@ -1,0 +1,100 @@
+{
+  "programming": {
+    "category": "Programming Languages",
+    "skills": [
+      "Python", "Java", "C++", "C", "C#", "JavaScript", "TypeScript", "R", "SQL",
+      "Go", "Rust", "Kotlin", "Swift", "Ruby", "PHP", "Scala", "MATLAB", "Julia",
+      "Perl", "Shell", "Bash", "PowerShell", "Assembly", "COBOL", "Fortran", "Dart"
+    ]
+  },
+  "data_science": {
+    "category": "Data Science & AI",
+    "skills": [
+      "Machine Learning", "Deep Learning", "Natural Language Processing", "NLP",
+      "Computer Vision", "Reinforcement Learning", "Statistical Modeling",
+      "Data Analysis", "Feature Engineering", "Model Evaluation", "A/B Testing",
+      "Time Series Analysis", "Anomaly Detection", "Recommendation Systems",
+      "Transfer Learning", "Generative AI", "Large Language Models", "LLMs",
+      "Neural Networks", "CNNs", "RNNs", "LSTMs", "Transformers", "BERT",
+      "GPT", "Diffusion Models", "GANs", "Clustering", "Classification",
+      "Regression", "Dimensionality Reduction", "PCA", "t-SNE"
+    ]
+  },
+  "ml_frameworks": {
+    "category": "ML Frameworks & Libraries",
+    "skills": [
+      "TensorFlow", "PyTorch", "Keras", "Scikit-learn", "XGBoost", "LightGBM",
+      "CatBoost", "Hugging Face", "spaCy", "NLTK", "Gensim", "FastAI",
+      "OpenCV", "Pillow", "Pandas", "NumPy", "SciPy", "Matplotlib", "Seaborn",
+      "Plotly", "Bokeh", "Streamlit", "Gradio", "MLflow", "Weights & Biases"
+    ]
+  },
+  "web": {
+    "category": "Web Development",
+    "skills": [
+      "React", "Angular", "Vue.js", "Next.js", "Nuxt.js", "Svelte",
+      "Node.js", "Express.js", "Django", "Flask", "FastAPI", "Spring Boot",
+      "Laravel", "Rails", "ASP.NET", "HTML", "CSS", "SCSS", "SASS",
+      "Bootstrap", "Tailwind CSS", "jQuery", "Redux", "GraphQL", "REST API",
+      "WebSockets", "Webpack", "Vite", "Babel", "TypeScript"
+    ]
+  },
+  "cloud": {
+    "category": "Cloud & Infrastructure",
+    "skills": [
+      "AWS", "Azure", "GCP", "Google Cloud", "Amazon S3", "EC2", "Lambda",
+      "Azure Functions", "Cloud Functions", "Cloud Run", "Vertex AI",
+      "SageMaker", "Databricks", "Snowflake", "BigQuery", "Redshift",
+      "Docker", "Kubernetes", "Terraform", "Ansible", "Helm",
+      "CI/CD", "Jenkins", "GitHub Actions", "GitLab CI", "ArgoCD",
+      "Prometheus", "Grafana", "ELK Stack", "Datadog"
+    ]
+  },
+  "mobile": {
+    "category": "Mobile Development",
+    "skills": [
+      "Android", "iOS", "React Native", "Flutter", "Kotlin", "Swift",
+      "Ionic", "Xamarin", "Unity", "Firebase Mobile", "Push Notifications",
+      "Mobile UI/UX", "App Store Optimization", "Mobile Security"
+    ]
+  },
+  "database": {
+    "category": "Databases",
+    "skills": [
+      "MySQL", "PostgreSQL", "MongoDB", "Redis", "SQLite", "Oracle",
+      "Microsoft SQL Server", "Cassandra", "DynamoDB", "Elasticsearch",
+      "Neo4j", "InfluxDB", "TimescaleDB", "MariaDB", "CouchDB",
+      "Firebase Realtime Database", "Firestore", "Supabase", "PlanetScale"
+    ]
+  },
+  "devops": {
+    "category": "DevOps & Tools",
+    "skills": [
+      "Git", "GitHub", "GitLab", "Bitbucket", "JIRA", "Confluence",
+      "Slack", "Docker Compose", "Nginx", "Apache", "Load Balancing",
+      "Microservices", "API Gateway", "Service Mesh", "Istio",
+      "Linux", "Ubuntu", "CentOS", "Windows Server", "MacOS",
+      "SSH", "Networking", "Security", "SSL/TLS", "OAuth", "JWT"
+    ]
+  },
+  "soft_skills": {
+    "category": "Soft Skills",
+    "skills": [
+      "Leadership", "Communication", "Problem Solving", "Critical Thinking",
+      "Teamwork", "Collaboration", "Time Management", "Project Management",
+      "Adaptability", "Creativity", "Presentation Skills", "Negotiation",
+      "Conflict Resolution", "Mentoring", "Decision Making", "Analytical Thinking",
+      "Attention to Detail", "Work Ethic", "Self-Motivation", "Empathy"
+    ]
+  },
+  "domain": {
+    "category": "Domain Knowledge",
+    "skills": [
+      "Finance", "Banking", "Healthcare", "Retail", "E-commerce", "Logistics",
+      "Supply Chain", "Manufacturing", "Education", "EdTech", "HR Technology",
+      "LegalTech", "AgriTech", "PropTech", "InsurTech", "FinTech",
+      "Cybersecurity", "Blockchain", "IoT", "Robotics", "AR/VR",
+      "Digital Marketing", "SEO", "SEM", "Product Management", "UX Research"
+    ]
+  }
+}

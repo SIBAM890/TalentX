@@ -1,0 +1,31 @@
+RESUME – Aditya Kumar
+Location: Patna, Bihar
+Email: aditya.kumar@email.com | Phone: +91-10987-65432
+
+SUMMARY
+Fresh B.Tech graduate from NIT Patna. Passionate about machine learning.
+Built multiple ML projects during college. Looking for first data science role.
+
+SKILLS
+Programming: Python, C, SQL (basic)
+ML: Scikit-learn, basic neural networks (self-taught)
+Libraries: Pandas, NumPy, Matplotlib
+Tools: Jupyter Notebook, Git
+Soft Skills: Quick learner, hardworking, team player
+
+EDUCATION
+B.Tech in Computer Science | NIT Patna | 2024 | CGPA: 7.2/10
+
+PROJECTS
+- Twitter Sentiment Analysis: NLTK + Logistic Regression (82% accuracy)
+- Digit Recognition: CNN model using Keras on MNIST dataset
+- Loan Default Predictor: Scikit-learn classification project
+
+ACTIVITIES
+- Participated in college hackathon (2nd place)
+- Member of coding club – organized Python workshop for juniors
+- Completed 30-day ML challenge on Kaggle
+
+CERTIFICATIONS
+- Python Programming (Udemy)
+- Data Science: Zero to Hero (Udemy)

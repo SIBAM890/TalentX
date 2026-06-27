@@ -1,0 +1,57 @@
+RESUME – Rahul Sharma
+Location: Bengaluru, Karnataka
+Email: rahul.sharma@email.com | Phone: +91-98765-43210
+LinkedIn: linkedin.com/in/rahulsharma | GitHub: github.com/rahulsharma
+
+SUMMARY
+Senior Data Scientist with 5 years of experience building ML systems at scale.
+Expert in Python, deep learning, NLP, and deploying models on AWS.
+Published researcher with strong open-source contributions.
+
+SKILLS
+Programming: Python (expert), R, SQL, Bash
+ML Frameworks: TensorFlow, PyTorch, Keras, Scikit-learn, XGBoost, LightGBM
+NLP: Transformers, BERT, spaCy, Hugging Face, NLTK, Gensim
+Cloud: AWS (SageMaker, S3, Lambda, EC2), GCP (BigQuery, Vertex AI)
+MLOps: MLflow, DVC, Docker, Kubernetes, CI/CD, GitHub Actions
+Data: Pandas, NumPy, Spark, Kafka
+Visualization: Matplotlib, Seaborn, Plotly, Tableau
+Soft Skills: Leadership, Communication, Mentoring, Problem Solving
+
+EXPERIENCE
+Senior Data Scientist | Razorpay | Bengaluru | 2022 – Present (3 years)
+- Built NLP-based fraud detection model reducing chargebacks by 35%
+- Designed recommendation engine serving 10M+ users; increased CTR by 22%
+- Led team of 4 junior data scientists; drove quarterly OKRs
+- Deployed 15+ ML models on AWS SageMaker with 99.9% uptime
+
+Data Scientist | Flipkart | Bengaluru | 2020 – 2022 (2 years)
+- Built demand forecasting models using LSTM; reduced inventory waste by 18%
+- Developed text classification pipeline for product catalog (98% accuracy)
+- A/B tested 30+ ML features with statistical rigor
+- Reduced model inference latency by 60% via quantization
+
+Machine Learning Intern | Ola | Bengaluru | 2019 (6 months)
+- Built surge pricing prediction model using XGBoost
+- Automated feature engineering pipeline saving 10 hours/week
+
+EDUCATION
+M.Tech in Computer Science (Specialization: AI/ML) | IIT Bombay | 2020 | CGPA: 9.1/10
+B.Tech in Computer Science | NIT Warangal | 2018 | CGPA: 8.8/10
+
+PUBLICATIONS
+- "Efficient Transformer Architectures for Low-Resource NLP" – ACL 2022
+- "Real-time Fraud Detection at Scale" – KDD 2021
+
+CERTIFICATIONS
+- AWS Certified Machine Learning Specialty
+- Google Professional Data Engineer
+- Deep Learning Specialization (Coursera – Andrew Ng)
+
+KAGGLE
+- Competition Expert | Rank: Top 3% globally
+- Won: IEEE Fraud Detection Challenge (2nd place)
+
+OPEN SOURCE
+- Contributor to Hugging Face Transformers (150+ stars)
+- Maintainer: ml-utils (500+ GitHub stars)

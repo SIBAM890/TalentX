@@ -1,0 +1,89 @@
+Data Scientist – AI Platform (3+ Years Experience)
+
+Company: Nexora AI Labs
+Location: Bengaluru / Remote (India)
+Type: Full-Time | Permanent
+Salary: ₹12 – 22 LPA
+
+---
+
+About Nexora AI Labs:
+Nexora AI Labs is building the next generation of AI-powered SaaS products for the BFSI and EdTech sectors.
+We process over 50 million data points daily and our models run in production at scale.
+
+---
+
+Job Summary:
+We are looking for a skilled Data Scientist with 3+ years of hands-on experience in machine learning,
+deep learning, and NLP. You will work directly with the AI Platform team to design, build, and deploy
+ML models that power our recommendation engine, risk engine, and personalization systems.
+
+---
+
+Key Responsibilities:
+- Design and implement end-to-end ML pipelines from data ingestion to deployment
+- Build NLP models for text classification, named entity recognition, and sentiment analysis
+- Develop recommendation systems using collaborative filtering and content-based methods
+- Optimize model performance using techniques like hyperparameter tuning and feature engineering
+- Deploy models using Docker, FastAPI, and cloud platforms (AWS SageMaker / GCP Vertex AI)
+- Monitor model drift, retrain pipelines, and ensure production reliability
+- Collaborate with cross-functional teams (product, engineering, design)
+- Communicate insights clearly to non-technical stakeholders
+
+---
+
+Required Skills:
+- Python (3+ years, expert level)
+- Machine Learning: classification, regression, clustering, ensemble methods
+- Deep Learning: CNNs, RNNs, Transformers, BERT
+- Natural Language Processing (NLP), text preprocessing, embeddings
+- SQL (complex queries, joins, window functions)
+- Pandas, NumPy, Scikit-learn, TensorFlow or PyTorch
+- Git, version control, collaborative development
+- Experience with REST APIs (Flask or FastAPI)
+- Statistical analysis and hypothesis testing
+- Data visualization (Matplotlib, Seaborn, Plotly)
+
+---
+
+Preferred Skills:
+- MLOps: MLflow, DVC, model monitoring
+- Cloud: AWS (SageMaker, S3, Lambda) or GCP (Vertex AI, BigQuery)
+- Docker, Kubernetes experience
+- Spark or distributed computing
+- Experience with LLMs or generative AI
+- Kaggle competitions or published research
+
+---
+
+Education:
+- B.Tech / M.Tech in Computer Science, Information Technology, or related
+- M.Sc in Data Science, Statistics, or Mathematics preferred
+- MBA with quantitative background considered
+
+---
+
+Nice to Have:
+- Publications in ML conferences (ICML, NeurIPS, ACL)
+- Open-source contributions to ML libraries
+- Experience in FinTech or EdTech domain
+
+---
+
+Perks:
+- Remote-first culture
+- ₹50,000 learning budget/year
+- ESOPs for high performers
+- Top-tier health insurance (self + family)
+- Flexible working hours
+
+---
+
+Interview Process:
+Round 1: Online assessment (DSA + ML concepts, 90 mins)
+Round 2: Technical interview – ML breadth (1 hour)
+Round 3: Case study – take-home ML problem (3–4 hours)
+Round 4: System design + culture fit with team lead (1 hour)
+Round 5: HR / offer discussion
+
+Apply via: careers@nexoraai.com with subject "Data Scientist – Application – [Your Name]"

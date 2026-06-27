@@ -1,0 +1,41 @@
+RESUME – Vikram Singh
+Location: New Delhi
+Email: vikram.singh@email.com | Phone: +91-54321-09876
+
+SUMMARY
+NLP Research Engineer with 4 years of experience in building production-grade
+language models. Deep expertise in Transformers, BERT, and LLM fine-tuning.
+Published 3 papers in top conferences.
+
+SKILLS
+Programming: Python (expert), SQL, Julia
+NLP: Transformers, BERT, GPT, T5, LLaMA, Sentence-BERT, spaCy, NLTK
+ML: PyTorch (expert), TensorFlow, JAX, Scikit-learn, Hugging Face
+MLOps: MLflow, Weights & Biases, Docker, Kubernetes, FastAPI
+Cloud: GCP (Vertex AI, BigQuery), AWS (SageMaker)
+Data: Pandas, NumPy, Spark (basic), DVC
+Visualization: Plotly, Seaborn, Streamlit
+
+EXPERIENCE
+NLP Research Engineer | Samsung R&D India | New Delhi | 2021 – Present (3 years)
+- Fine-tuned LLMs (LLaMA-2) for code generation; reduced hallucinations by 40%
+- Built multilingual NLP pipeline supporting 8 Indian languages
+- Led NLP infrastructure for 3 production AI products
+- Filed 2 patents on efficient inference optimization
+
+Machine Learning Engineer | Juspay | Bengaluru | 2020 – 2021 (1 year)
+- Built fraud detection NLP pipeline analyzing transaction descriptions
+- Deployed BERT-based intent classification model (96% accuracy)
+
+EDUCATION
+M.Tech in AI | IIT Delhi | 2020 | CGPA: 9.4/10
+B.Tech in Electronics | Delhi Technological University | 2018 | CGPA: 8.5/10
+
+PUBLICATIONS
+- "Efficient Multilingual BERT for Indian Languages" – EMNLP 2022
+- "Low-Rank Adaptation of LLMs for Edge Devices" – ACL 2023
+- "Cross-Lingual Transfer for Code-Switching NLP" – NAACL 2021
+
+OPEN SOURCE
+- Contributor: Hugging Face Datasets (3 Indian language datasets added)
+- indic-nlp-toolkit: 800+ GitHub stars

@@ -1,0 +1,327 @@
+{
+  "central_schemes": [
+    {
+      "name": "National Scholarship Portal (NSP)",
+      "authority": "Ministry of Education, Govt of India",
+      "amount": "₹10,000–50,000/year",
+      "eligibility": "Students from SC/ST/OBC/Minority communities",
+      "income_limit": "₹6 lakh/year",
+      "apply_at": "https://scholarships.gov.in",
+      "level": ["Pre-Matric", "Post-Matric", "UG", "PG"]
+    },
+    {
+      "name": "Pragati Scholarship (for Girls)",
+      "authority": "AICTE",
+      "amount": "₹30,000/year + ₹2,000 contingency",
+      "eligibility": "Girl students in AICTE-approved technical institutes",
+      "income_limit": "₹8 lakh/year",
+      "apply_at": "https://scholarships.gov.in",
+      "level": ["UG Diploma", "B.Tech", "B.Arch"]
+    },
+    {
+      "name": "Saksham Scholarship (for Disabled)",
+      "authority": "AICTE",
+      "amount": "₹30,000/year + ₹2,000 contingency",
+      "eligibility": "Students with >40% disability in AICTE institutes",
+      "income_limit": "₹8 lakh/year",
+      "apply_at": "https://scholarships.gov.in",
+      "level": ["UG Diploma", "B.Tech"]
+    },
+    {
+      "name": "Central Sector Scheme of Scholarships",
+      "authority": "Ministry of Education",
+      "amount": "₹12,000/year (UG) | ₹20,000/year (PG)",
+      "eligibility": "Top 20 percentile in 12th boards",
+      "income_limit": "₹8 lakh/year",
+      "apply_at": "https://scholarships.gov.in",
+      "level": ["UG", "PG"]
+    },
+    {
+      "name": "PM Yasasvi Scholarship",
+      "authority": "Ministry of Social Justice and Empowerment",
+      "amount": "₹75,000–1,25,000/year",
+      "eligibility": "OBC/EBC/DNT students in Class 9/11",
+      "income_limit": "₹2.5 lakh/year",
+      "apply_at": "https://scholarships.gov.in",
+      "level": ["Secondary", "Senior Secondary"]
+    },
+    {
+      "name": "National Means-cum-Merit Scholarship (NMMS)",
+      "authority": "Ministry of Education",
+      "amount": "₹12,000/year",
+      "eligibility": "Students from Class 9 from govt schools",
+      "income_limit": "₹3.5 lakh/year",
+      "apply_at": "https://scholarships.gov.in",
+      "level": ["Secondary", "Senior Secondary"]
+    },
+    {
+      "name": "Maulana Azad National Fellowship",
+      "authority": "Ministry of Minority Affairs",
+      "amount": "₹31,000/month (JRF) | ₹35,000/month (SRF)",
+      "eligibility": "Minority community students for Ph.D",
+      "income_limit": "₹6 lakh/year",
+      "apply_at": "https://maef.nic.in",
+      "level": ["Ph.D"]
+    },
+    {
+      "name": "Prime Minister's Research Fellowship (PMRF)",
+      "authority": "Ministry of Education",
+      "amount": "₹70,000–80,000/month",
+      "eligibility": "Exceptional students for direct Ph.D at IITs/IISc",
+      "income_limit": "No income limit",
+      "apply_at": "https://pmrf.in",
+      "level": ["Ph.D"]
+    }
+  ],
+  "state_schemes": {
+    "odisha": [
+      {
+        "name": "Odisha Post-Matric Scholarship",
+        "authority": "ST & SC Development Dept, Odisha",
+        "amount": "₹15,000–20,000/year",
+        "eligibility": "SC/ST/OBC/SEBC students",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://scholarship.odisha.gov.in",
+        "level": ["Post-Matric", "UG", "PG"]
+      },
+      {
+        "name": "PRERANA Scholarship",
+        "authority": "Odisha Govt",
+        "amount": "₹15,000/year",
+        "eligibility": "Meritorious SC/ST students",
+        "income_limit": "₹1 lakh/year",
+        "apply_at": "https://scholarship.odisha.gov.in",
+        "level": ["UG"]
+      },
+      {
+        "name": "Medhabruti Scholarship",
+        "authority": "Odisha Govt",
+        "amount": "₹10,000–25,000/year",
+        "eligibility": "High scorers in 10th and 12th boards",
+        "income_limit": "₹6 lakh/year",
+        "apply_at": "https://scholarship.odisha.gov.in",
+        "level": ["Senior Secondary", "UG"]
+      }
+    ],
+    "maharashtra": [
+      {
+        "name": "Rajarshi Chhatrapati Shahu Maharaj Scholarship",
+        "authority": "Maharashtra Govt",
+        "amount": "₹25,000–60,000/year",
+        "eligibility": "EBC students scoring 75%+ in 12th",
+        "income_limit": "₹8 lakh/year",
+        "apply_at": "https://mahadbtmahait.gov.in",
+        "level": ["UG", "PG"]
+      },
+      {
+        "name": "Swadhar Greh Scheme",
+        "authority": "Maharashtra Govt",
+        "amount": "₹51,000/year",
+        "eligibility": "SC students without hostel facility",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://mahadbtmahait.gov.in",
+        "level": ["UG", "PG"]
+      }
+    ],
+    "rajasthan": [
+      {
+        "name": "Chief Minister's Higher Education Scholarship",
+        "authority": "Rajasthan Govt",
+        "amount": "₹10,000/year",
+        "eligibility": "Students scoring 60%+ in 12th from govt schools",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://hte.rajasthan.gov.in",
+        "level": ["UG"]
+      },
+      {
+        "name": "Ambedkar DBT Voucher Scheme",
+        "authority": "Rajasthan Social Justice Dept",
+        "amount": "₹5,000–10,000/year",
+        "eligibility": "SC students in UG courses",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://sje.rajasthan.gov.in",
+        "level": ["UG"]
+      }
+    ],
+    "telangana": [
+      {
+        "name": "Telangana Vidya Deevena",
+        "authority": "Telangana State Govt",
+        "amount": "Full fee reimbursement",
+        "eligibility": "All students in state colleges",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://telanganaepass.cgg.gov.in",
+        "level": ["UG", "PG"]
+      },
+      {
+        "name": "Telangana Vasathi Deevena",
+        "authority": "Telangana State Govt",
+        "amount": "₹10,000/year (maintenance)",
+        "eligibility": "Hostelers in UG/PG courses",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://telanganaepass.cgg.gov.in",
+        "level": ["UG", "PG"]
+      }
+    ],
+    "andhra_pradesh": [
+      {
+        "name": "AP Jagananna Vidya Deevena",
+        "authority": "AP Govt",
+        "amount": "Full fee reimbursement",
+        "eligibility": "All students in recognized colleges",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://apepass.apcfss.in",
+        "level": ["UG", "PG", "Diploma"]
+      }
+    ],
+    "west_bengal": [
+      {
+        "name": "Aikyashree Scholarship",
+        "authority": "West Bengal Minority Development & Finance Corporation",
+        "amount": "₹5,000–20,000/year",
+        "eligibility": "Minority community students",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://wbmdfcscholarship.in",
+        "level": ["Pre-Matric", "UG", "PG"]
+      },
+      {
+        "name": "Swami Vivekananda Merit-Cum-Means Scholarship",
+        "authority": "West Bengal Govt",
+        "amount": "₹12,000–60,000/year",
+        "eligibility": "Students scoring 75%+ in 12th",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://svmcm.wbhed.gov.in",
+        "level": ["UG", "PG"]
+      }
+    ],
+    "karnataka": [
+      {
+        "name": "Rajiv Gandhi Scholarship",
+        "authority": "Karnataka Govt",
+        "amount": "₹1,500–7,500/year",
+        "eligibility": "SC/ST students",
+        "income_limit": "₹2 lakh/year",
+        "apply_at": "https://karepass.cgg.gov.in",
+        "level": ["UG", "PG"]
+      },
+      {
+        "name": "Minority Scholarship Karnataka",
+        "authority": "Karnataka Minority Welfare Dept",
+        "amount": "₹2,000–6,000/year",
+        "eligibility": "Minority students",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://www.minoritywelfare.kar.nic.in",
+        "level": ["Pre-Matric", "UG"]
+      }
+    ],
+    "uttar_pradesh": [
+      {
+        "name": "UP Post-Matric Scholarship",
+        "authority": "UP Govt Social Welfare Dept",
+        "amount": "₹2,000–20,000/year",
+        "eligibility": "SC/ST/OBC/Minority/General EWS students",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://scholarship.up.gov.in",
+        "level": ["Post-Matric", "UG", "PG"]
+      }
+    ],
+    "bihar": [
+      {
+        "name": "Bihar Post-Matric Scholarship",
+        "authority": "Bihar Govt",
+        "amount": "₹2,000–15,000/year",
+        "eligibility": "SC/ST/OBC/BC students",
+        "income_limit": "₹1.5 lakh/year",
+        "apply_at": "https://pmsonline.bih.nic.in",
+        "level": ["Post-Matric", "UG"]
+      },
+      {
+        "name": "Mukhyamantri Kanya Utthan Yojana",
+        "authority": "Bihar Govt",
+        "amount": "₹50,000 (on graduation)",
+        "eligibility": "Girl students completing graduation",
+        "income_limit": "No limit",
+        "apply_at": "https://medhasoft.bih.nic.in",
+        "level": ["UG"]
+      }
+    ],
+    "tamilnadu": [
+      {
+        "name": "Tamil Nadu Post-Matric Scholarship",
+        "authority": "TN Adi Dravidar Welfare Dept",
+        "amount": "₹3,000–20,000/year",
+        "eligibility": "SC/ST students",
+        "income_limit": "₹2 lakh/year",
+        "apply_at": "https://adwelfare.tn.gov.in",
+        "level": ["Post-Matric", "UG", "PG"]
+      }
+    ],
+    "gujarat": [
+      {
+        "name": "Gujarat Post-Matric Scholarship (SC)",
+        "authority": "Gujarat Social Justice Dept",
+        "amount": "₹5,000–15,000/year",
+        "eligibility": "SC students",
+        "income_limit": "₹2.5 lakh/year",
+        "apply_at": "https://digitalgujarat.gov.in",
+        "level": ["Post-Matric", "UG"]
+      }
+    ]
+  },
+  "private_scholarships": [
+    {
+      "name": "Reliance Foundation Scholarship",
+      "authority": "Reliance Foundation",
+      "amount": "₹2,00,000/year (UG) | ₹6,00,000/year (PG)",
+      "eligibility": "Top engineering and management students",
+      "income_limit": "₹15 lakh/year",
+      "apply_at": "https://scholarships.reliancefoundation.org",
+      "level": ["UG", "PG"]
+    },
+    {
+      "name": "Tata Capital Pankh Scholarship",
+      "authority": "Tata Capital",
+      "amount": "₹50,000/year",
+      "eligibility": "Students scoring 60%+ from economically weak families",
+      "income_limit": "₹4 lakh/year",
+      "apply_at": "https://www.buddy4study.com",
+      "level": ["UG"]
+    },
+    {
+      "name": "Infosys BPO Scholarship",
+      "authority": "Infosys BPO",
+      "amount": "₹20,000/year",
+      "eligibility": "Students from backward communities",
+      "income_limit": "₹3 lakh/year",
+      "apply_at": "https://www.infosys.com/infosys-foundation",
+      "level": ["UG"]
+    },
+    {
+      "name": "Google India Scholarship",
+      "authority": "Google India",
+      "amount": "₹75,000 (one-time)",
+      "eligibility": "Women in Computer Science, B.Tech students",
+      "income_limit": "No strict limit",
+      "apply_at": "https://buildyourfuture.withgoogle.com",
+      "level": ["UG"]
+    },
+    {
+      "name": "HDFC Bank CSR Scholarship",
+      "authority": "HDFC Bank Parivartan",
+      "amount": "₹25,000–75,000/year",
+      "eligibility": "Meritorious students from low-income families",
+      "income_limit": "₹2.5 lakh/year",
+      "apply_at": "https://hdfcbank.com/csr",
+      "level": ["UG", "PG"]
+    },
+    {
+      "name": "ONGC Scholarship",
+      "authority": "ONGC Foundation",
+      "amount": "₹48,000/year",
+      "eligibility": "SC/ST students in B.Tech/MBA/MBBS",
+      "income_limit": "No limit",
+      "apply_at": "https://ongcscholar.in",
+      "level": ["UG", "PG"]
+    }
+  ]
+}

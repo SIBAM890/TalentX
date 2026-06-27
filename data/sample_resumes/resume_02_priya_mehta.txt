@@ -1,0 +1,42 @@
+RESUME – Priya Mehta
+Location: Hyderabad, Telangana
+Email: priya.mehta@email.com | Phone: +91-87654-32109
+LinkedIn: linkedin.com/in/priyamehta
+
+SUMMARY
+Data Scientist with 3 years of experience in NLP and machine learning.
+Strong background in Python, scikit-learn, and deep learning.
+Passionate about building intelligent systems.
+
+SKILLS
+Programming: Python, SQL, R
+ML: Machine Learning, Deep Learning, NLP, Classification, Regression
+Libraries: Scikit-learn, TensorFlow, Pandas, NumPy, NLTK, spaCy
+Cloud: AWS S3, EC2 (basics), Google Colab
+Tools: Git, Jupyter, Docker (basic), Tableau, Power BI
+Soft Skills: Communication, Teamwork, Critical Thinking
+
+EXPERIENCE
+Data Scientist | Hyderabad Analytics Pvt Ltd | 2022 – Present (2.5 years)
+- Built customer churn prediction model (87% accuracy) using XGBoost
+- Developed NLP pipeline for sentiment analysis of customer reviews
+- Created automated reporting dashboards in Tableau for leadership
+- Reduced data processing time by 40% using optimized SQL queries
+
+Junior Data Analyst | TechSolutions India | 2021 – 2022 (1 year)
+- Analyzed marketing campaign data using Python and Excel
+- Built weekly automated reports using Python and email automation
+- Supported senior team with data cleaning and visualization
+
+EDUCATION
+B.Tech in Information Technology | BITS Pilani | 2021 | CGPA: 8.2/10
+
+CERTIFICATIONS
+- Machine Learning Specialization (Coursera)
+- IBM Data Science Professional Certificate
+- SQL for Data Science (Coursera)
+
+PROJECTS
+- Customer Sentiment Analyzer: NLP model with 91% accuracy on BERT embeddings
+- House Price Prediction: Ensemble model using Random Forest + XGBoost
+- Covid Data Dashboard: Interactive Plotly dashboard with real-time data

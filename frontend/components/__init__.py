@@ -1,0 +1,1 @@
+"""TalentX – Frontend Components Package"""

@@ -1,0 +1,38 @@
+RESUME – Arjun Patel
+Location: Ahmedabad, Gujarat
+Email: arjun.patel@email.com | Phone: +91-76543-21098
+
+SUMMARY
+Recent B.Tech graduate passionate about data science and AI.
+Strong Python and ML fundamentals with 2 internships completed.
+Actively building projects and participating in Kaggle competitions.
+
+SKILLS
+Programming: Python, C++, SQL (basic)
+Machine Learning: Linear Regression, Logistic Regression, Decision Trees, Random Forest
+Deep Learning: Basic Neural Networks, CNNs (beginner)
+Tools: Pandas, NumPy, Matplotlib, Scikit-learn, Jupyter Notebook
+Version Control: Git, GitHub
+Other: Excel, PowerPoint, HTML
+
+EXPERIENCE
+Data Science Intern | StartupXYZ | Ahmedabad | June 2023 – Sept 2023 (3 months)
+- Cleaned and preprocessed 50,000 rows of customer data
+- Built a simple churn prediction model using Logistic Regression (79% accuracy)
+- Created visualizations for monthly business reports
+
+ML Intern | College Research Lab | Jan 2023 – May 2023 (5 months)
+- Assisted in building image classification model for medical imaging
+- Documented research findings and prepared presentation slides
+
+EDUCATION
+B.Tech in Computer Science | Nirma University, Ahmedabad | 2024 | CGPA: 7.8/10
+
+PROJECTS
+- Stock Price Predictor: LSTM model using historical data (academic project)
+- Movie Recommendation System: Collaborative filtering using cosine similarity
+- Spam Email Classifier: NLP model with 94% accuracy using Naive Bayes
+
+CERTIFICATIONS
+- Python for Data Science (Udemy)
+- Machine Learning A-Z (Udemy)
