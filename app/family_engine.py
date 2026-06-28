@@ -4,6 +4,7 @@ Balances student passion with parent stability concerns.
 """
 import re
 import logging
+from app.llm_client import get_llm_client
 from app.models import FamilyDecisionRequest, FamilyDecisionResponse
 
 logger = logging.getLogger("talentx.family")
@@ -150,6 +151,13 @@ class FamilyEngine:
             f"and family's need for **{parent_priority}**. "
             f"The compromise path honors both by building stability first while keeping the growth door open."
         )
+        key_insight = self._enhance_key_insight(
+            request,
+            student_priority,
+            parent_priority,
+            compromise["compromise"],
+            key_insight,
+        )
 
         return FamilyDecisionResponse(
             student_goal=request.student_view[:200],
@@ -163,6 +171,31 @@ class FamilyEngine:
             timeline=compromise["duration"],
             key_insight=key_insight,
         )
+
+    def _enhance_key_insight(
+        self,
+        request: FamilyDecisionRequest,
+        student_priority: str,
+        parent_priority: str,
+        recommendation: str,
+        fallback: str,
+    ) -> str:
+        """Use OpenRouter to make the family explanation warmer when available."""
+        prompt = (
+            f"Student view: {request.student_view}\n"
+            f"Parent view: {request.parent_view}\n"
+            f"Detected student priority: {student_priority}\n"
+            f"Detected parent priority: {parent_priority}\n"
+            f"Recommendation: {recommendation}\n\n"
+            "Write one empathetic insight for an Indian family decision. "
+            "Keep it under 80 words, practical, balanced, and non-judgmental."
+        )
+        enhanced = get_llm_client().chat(
+            "You are TalentX, a calm mediator for student-parent career decisions.",
+            prompt,
+            max_tokens=130,
+        )
+        return enhanced or fallback
 
 
 _family_instance = None

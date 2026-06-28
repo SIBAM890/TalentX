@@ -303,6 +303,15 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 ### Run Frontend
 ```bash
+# React frontend
+cd frontend-react
+npm install
+npm run dev
+# UI at: http://localhost:5173
+```
+
+### Legacy Streamlit Frontend
+```bash
 streamlit run frontend/app.py
 # UI at: http://localhost:8501
 ```

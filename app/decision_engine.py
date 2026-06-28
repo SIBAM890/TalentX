@@ -5,6 +5,7 @@ Career decision simulation and comparison for Indian students.
 import re
 import logging
 from app.config import CAREER_PATHS_PATH
+from app.llm_client import get_llm_client
 from app.utils import load_json
 from app.models import (
     DecisionOption, TimelineMilestone, CandidateDecisionResponse
@@ -248,6 +249,7 @@ class DecisionEngine:
             f"with {top.growth_potential} growth potential and {top.risk_level} risk. "
             f"Expected salary: {top.expected_salary}."
         ) if top else "Please provide more details about your situation for a personalized recommendation."
+        recommendation = self._enhance_recommendation(query, options_out, recommendation)
 
         bharat_context = self._bharat_context(request)
 
@@ -274,6 +276,37 @@ class DecisionEngine:
             if key in location:
                 return ctx
         return "India's tech sector is growing rapidly with 1,000+ unicorns by 2030 expected. Act now to capitalize."
+
+    def _enhance_recommendation(
+        self,
+        query: str,
+        options: list[DecisionOption],
+        fallback: str,
+    ) -> str:
+        """Use OpenRouter to write a sharper recommendation when configured."""
+        if not options:
+            return fallback
+
+        option_summary = "\n".join(
+            f"- {option.name}: risk={option.risk_level}, growth={option.growth_potential}, "
+            f"salary={option.expected_salary}, confidence={option.confidence:.0f}%"
+            for option in options[:4]
+        )
+        prompt = (
+            "Student query:\n"
+            f"{query}\n\n"
+            "Options detected:\n"
+            f"{option_summary}\n\n"
+            "Write a concise India-specific recommendation in 3-4 sentences. "
+            "Name the best first step, one key risk, and one practical next action. "
+            "Do not mention that you are an AI model."
+        )
+        enhanced = get_llm_client().chat(
+            "You are TalentX, a practical career decision assistant for Indian students.",
+            prompt,
+            max_tokens=220,
+        )
+        return enhanced or fallback
 
 
 _decision_instance = None

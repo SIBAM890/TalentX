@@ -23,6 +23,13 @@ SENTENCE_BERT_MODEL = os.getenv("SENTENCE_BERT_MODEL", "all-MiniLM-L6-v2")
 SPACY_MODEL = os.getenv("SPACY_MODEL", "en_core_web_sm")
 USE_GPU = os.getenv("USE_GPU", "false").lower() == "true"
 
+# OpenRouter / LLM settings
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
+OPENROUTER_VERIFY_SSL = os.getenv("OPENROUTER_VERIFY_SSL", "true").lower() == "true"
+LLM_ENABLED = os.getenv("LLM_ENABLED", "true").lower() == "true"
+
 # Frontend
 FRONTEND_PORT = int(os.getenv("FRONTEND_PORT", "8501"))
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")

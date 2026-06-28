@@ -1,97 +1,117 @@
-"""
-TalentX – Candidate Tab (DishaSetu Mode)
-Career decision simulator for Indian students.
-"""
-import streamlit as st
+"""Candidate mode UI for TalentX."""
+import os
+import sys
+
 import plotly.graph_objects as go
-import plotly.express as px
 import requests
-import json
-import sys, os
+import streamlit as st
+
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 from app.config import API_BASE_URL
 
 
 def _api(endpoint: str, payload: dict = None, method: str = "POST"):
-    """Make API call with fallback to direct engine call."""
     url = f"{API_BASE_URL}{endpoint}"
     try:
         if method == "POST":
-            r = requests.post(url, json=payload, timeout=30)
+            response = requests.post(url, json=payload, timeout=30)
         else:
-            r = requests.get(url, timeout=10)
-        r.raise_for_status()
-        return r.json(), None
-    except Exception as e:
-        return None, str(e)
+            response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        return response.json(), None
+    except Exception as exc:
+        return None, str(exc)
 
 
 def _direct_decide(query: str, background: str = None, location: str = None):
-    """Direct engine call bypassing HTTP (fallback)."""
     from app.decision_engine import get_decision_engine
     from app.models import CandidateDecisionRequest
+
     engine = get_decision_engine()
-    req = CandidateDecisionRequest(query=query, user_background=background, location=location)
-    return engine.simulate_options(req)
+    request = CandidateDecisionRequest(query=query, user_background=background, location=location)
+    return engine.simulate_options(request)
 
 
 def _direct_risk(option: str, profile: str = None):
-    from app.risk_engine import get_risk_engine
     from app.models import RiskRequest
+    from app.risk_engine import get_risk_engine
+
     engine = get_risk_engine()
-    req = RiskRequest(option=option, user_profile=profile)
-    return engine.assess_risk(req.option, req.user_profile)
+    request = RiskRequest(option=option, user_profile=profile)
+    return engine.assess_risk(request.option, request.user_profile)
 
 
 def _direct_scholarships(state: str):
     from app.bharat_knowledge import get_bharat_knowledge
-    knowledge = get_bharat_knowledge()
-    return knowledge.get_scholarships(state=state)
+
+    return get_bharat_knowledge().get_scholarships(state=state)
 
 
-def _option_color(idx: int) -> str:
-    colors = ["#6C63FF", "#FF6584", "#43D9B3", "#FFC107"]
-    return colors[idx % len(colors)]
+def _option_color(index: int) -> str:
+    return ["#645cff", "#ff971f", "#42bd67", "#f25584"][index % 4]
 
 
 def render_candidate_tab():
-    """Main render function for the Candidate / DishaSetu tab."""
+    st.markdown(
+        """
+        <div class="tx-status"><span>9:41</span><span class="tx-signal">● ● ●</span></div>
+        <div class="tx-header-row">
+            <div class="tx-avatar">A</div>
+            <div style="flex:1; padding-left:12px;">
+                <h2 style="margin:0;font-size:18px;">Hi, Ananya!</h2>
+                <p class="tx-panel-subtitle" style="margin-top:3px;">What career path do you want to explore today?</p>
+            </div>
+            <div class="tx-icon-btn">⌁</div>
+        </div>
+        <section class="tx-learning-card">
+            <div>
+                <h3>Your Learning Journey</h3>
+                <p>Level 3 · Keep learning!</p>
+                <div class="tx-progress-track"><div class="tx-progress-fill"></div></div>
+            </div>
+            <div class="tx-target">◎</div>
+        </section>
+        <h3 class="tx-panel-title">My Learning Plan</h3>
+        <section class="tx-stat-grid" style="grid-template-columns:repeat(3,1fr);">
+            <article class="tx-stat tx-green-soft"><i>▰</i><strong>15</strong><span>Career Paths</span></article>
+            <article class="tx-stat tx-orange-soft"><i>□</i><strong>4</strong><span>Risk Types</span></article>
+            <article class="tx-stat tx-blue-soft"><i>▣</i><strong>50+</strong><span>Schemes</span></article>
+        </section>
+        """,
+        unsafe_allow_html=True,
+    )
 
-    st.markdown("""
-    <div style='background: linear-gradient(135deg, rgba(108,99,255,0.12), rgba(67,217,179,0.08));
-                border: 1px solid rgba(108,99,255,0.3); border-radius: 16px; padding: 1.5rem 2rem; margin-bottom: 1.5rem;'>
-        <h2 style='margin:0; color:#6C63FF; font-family: Outfit, sans-serif;'>🧭 DishaSetu Mode</h2>
-        <p style='margin:0.3rem 0 0 0; color: #9999BB; font-size: 0.95rem;'>
-        AI-powered career decision simulator for Indian students. Compare paths, assess risks, visualize futures.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # ── Input ──────────────────────────────────────────────────────────────────
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        query = st.text_area(
-            "🎯 What's your career dilemma?",
-            placeholder="e.g., I'm a BTech CSE student confused between GATE, placements, and higher studies abroad...",
-            height=110,
-            key="candidate_query"
+    st.markdown('<h3 class="tx-panel-title">Quick Activities</h3>', unsafe_allow_html=True)
+    left, right = st.columns(2)
+    with left:
+        st.markdown(
+            '<article class="tx-soft-card tx-activity purple"><strong>Compare Paths</strong><br>'
+            '<span>See cost, growth, time and risk together</span></article>',
+            unsafe_allow_html=True,
         )
-    with col2:
-        background = st.text_area(
-            "👤 Your Background (optional)",
-            placeholder="e.g., 3rd year BTech, CGPA 8.0, know Python & ML basics",
-            height=55,
-            key="candidate_bg"
-        )
-        location = st.text_input(
-            "📍 Your State (optional)",
-            placeholder="e.g., Odisha, Maharashtra",
-            key="candidate_location"
+    with right:
+        st.markdown(
+            '<article class="tx-soft-card tx-activity orange"><strong>Smart Focus</strong><br>'
+            '<span>Find safer choices and action steps</span></article>',
+            unsafe_allow_html=True,
         )
 
-    analyze_btn = st.button("🚀 Simulate My Options", key="analyze_btn", use_container_width=True)
+    query = st.text_area(
+        "Career dilemma",
+        placeholder="Example: I am a BTech CSE student confused between GATE, placements, and MS abroad.",
+        height=112,
+        key="candidate_query",
+    )
+    background = st.text_area(
+        "Background",
+        placeholder="Example: 3rd year BTech, CGPA 8.0, Python and ML basics.",
+        height=82,
+        key="candidate_bg",
+    )
+    location = st.text_input("State", placeholder="Example: Odisha", key="candidate_location")
 
-    if not analyze_btn:
+    if not st.button("Simulate My Options", key="analyze_btn", use_container_width=True):
         _render_example_prompts()
         return
 
@@ -99,33 +119,25 @@ def render_candidate_tab():
         st.warning("Please enter your career question above.")
         return
 
-    with st.spinner("🤖 TalentX is simulating your options..."):
+    with st.spinner("TalentX is simulating your options..."):
         try:
             result = _direct_decide(query.strip(), background or None, location or None)
             _render_results(result, location)
-        except Exception as e:
-            st.error(f"Error: {e}")
+        except Exception as exc:
+            st.error(f"Error: {exc}")
 
 
 def _render_example_prompts():
-    st.markdown("---")
-    st.markdown("#### 💡 Try these examples:")
-    examples = [
-        "I'm a BTech CSE student confused between GATE, placements, and higher studies abroad",
-        "Should I do MBA or pursue data science after my engineering?",
-        "I want to start a startup vs get a stable job — help me decide",
-        "I'm from Odisha, confused between government jobs and private tech companies",
-    ]
-    cols = st.columns(2)
-    for i, ex in enumerate(examples):
-        with cols[i % 2]:
-            st.markdown(f"""
-            <div style='background: rgba(108,99,255,0.08); border: 1px solid rgba(108,99,255,0.2);
-                        border-radius: 10px; padding: 0.75rem; margin: 0.3rem 0; cursor: pointer;
-                        font-size: 0.85rem; color: #9999BB;'>
-            💬 "{ex[:80]}..."
-            </div>
-            """, unsafe_allow_html=True)
+    st.markdown(
+        """
+        <section class="tx-chip-row">
+            <span class="tx-chip tx-purple-soft">GATE vs Job</span>
+            <span class="tx-chip tx-orange-soft">MBA vs DS</span>
+            <span class="tx-chip tx-green-soft">Startup Risk</span>
+        </section>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 def _render_results(result, location: str = None):
@@ -134,164 +146,119 @@ def _render_results(result, location: str = None):
         st.error("No options detected. Please rephrase your query.")
         return
 
-    # ── Recommendation Banner ──────────────────────────────────────────────────
-    st.markdown(f"""
-    <div style='background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(67,217,179,0.1));
-                border: 1px solid rgba(108,99,255,0.4); border-radius: 14px; padding: 1.2rem 1.5rem; margin: 1rem 0;'>
-        <div style='color: #6C63FF; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;'>
-            🏆 AI RECOMMENDATION
-        </div>
-        <div style='color: #F0F0FF; font-size: 1rem; margin-top: 0.4rem;'>{result.recommendation}</div>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <article class="tx-result-card tx-purple-soft" style="margin-top:18px;">
+            <span style="color:#645cff;font-size:12px;font-weight:900;">AI RECOMMENDATION</span>
+            <h3 style="margin:8px 0 0;">{result.recommendation}</h3>
+        </article>
+        """,
+        unsafe_allow_html=True,
+    )
 
-    # ── Options Comparison Table ───────────────────────────────────────────────
-    st.markdown("### 📊 Options Comparison")
+    st.markdown('<h3 class="tx-panel-title">Options Comparison</h3>', unsafe_allow_html=True)
     _render_comparison_chart(options)
 
-    # ── Individual Option Cards ────────────────────────────────────────────────
-    st.markdown("### 🔍 Detailed Analysis")
-    for idx, opt in enumerate(options):
-        color = _option_color(idx)
-        with st.expander(f"{'🥇' if idx==0 else '🥈' if idx==1 else '🥉' if idx==2 else '📌'} **{opt.name}** — Score: {opt.confidence:.0f}%", expanded=(idx == 0)):
-            c1, c2, c3, c4 = st.columns(4)
-            with c1:
-                st.metric("💰 Cost", opt.cost.split("(")[0].strip())
-            with c2:
-                st.metric("⏱️ Time", opt.time_required)
-            with c3:
-                risk_emoji = "🟢" if opt.risk_level == "Low" else "🟡" if opt.risk_level == "Medium" else "🔴"
-                st.metric(f"{risk_emoji} Risk", opt.risk_level)
-            with c4:
-                st.metric("📈 Growth", opt.growth_potential)
+    st.markdown('<h3 class="tx-panel-title">Detailed Analysis</h3>', unsafe_allow_html=True)
+    for index, option in enumerate(options):
+        with st.expander(f"{index + 1}. {option.name} · {option.confidence:.0f}%", expanded=index == 0):
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Cost", option.cost.split("(")[0].strip())
+            c2.metric("Time", option.time_required)
+            c3.metric("Risk", option.risk_level)
+            st.markdown(f"**Expected salary:** {option.expected_salary}")
+            st.write(option.description)
 
-            st.markdown(f"**💼 Expected Salary:** {opt.expected_salary}")
-            st.markdown(f"*{opt.description}*")
-
-            # Pros / Cons
             pcol1, pcol2 = st.columns(2)
             with pcol1:
-                st.markdown("**✅ Pros:**")
-                for pro in opt.pros:
+                st.markdown("**Pros**")
+                for pro in option.pros:
                     st.markdown(f"- {pro}")
             with pcol2:
-                st.markdown("**⚠️ Cons:**")
-                for con in opt.cons:
+                st.markdown("**Cons**")
+                for con in option.cons:
                     st.markdown(f"- {con}")
 
-            # Timeline
-            if opt.timeline:
-                st.markdown("**📅 Year-by-Year Roadmap:**")
-                for m in opt.timeline[:5]:
-                    st.markdown(f"**Year {m.year}** · {m.milestone} → *{m.action}*")
+            if option.timeline:
+                st.markdown("**Roadmap**")
+                for milestone in option.timeline[:5]:
+                    st.markdown(f"**Year {milestone.year}:** {milestone.milestone} → {milestone.action}")
 
-    # ── Risk Assessment ────────────────────────────────────────────────────────
-    if options:
-        st.markdown("---")
-        st.markdown("### 🛡️ Risk Intelligence")
-        with st.spinner("Assessing risks..."):
-            try:
-                risk = _direct_risk(options[0].name, None)
-                _render_risk_panel(risk)
-            except Exception as e:
-                st.info("Risk analysis unavailable.")
+    st.markdown('<h3 class="tx-panel-title">Risk Intelligence</h3>', unsafe_allow_html=True)
+    try:
+        _render_risk_panel(_direct_risk(options[0].name, None))
+    except Exception:
+        st.info("Risk analysis unavailable.")
 
-    # ── Bharat Scholarships ────────────────────────────────────────────────────
     if location:
-        st.markdown("---")
-        st.markdown("### 🇮🇳 Bharat Knowledge Layer")
-        with st.spinner("Fetching scholarships..."):
-            try:
-                scholarships = _direct_scholarships(location)
-                _render_scholarships(scholarships)
-            except Exception:
-                pass
+        st.markdown('<h3 class="tx-panel-title">Bharat Knowledge Layer</h3>', unsafe_allow_html=True)
+        try:
+            _render_scholarships(_direct_scholarships(location))
+        except Exception:
+            pass
 
 
 def _render_comparison_chart(options):
-    """Render a radar/bar chart comparing all options."""
     if len(options) < 2:
         return
 
-    categories = ["Cost", "Growth", "Confidence"]
     fig = go.Figure()
-
-    for i, opt in enumerate(options):
-        color = _option_color(i)
-        fig.add_trace(go.Bar(
-            name=opt.name[:30],
-            x=categories,
-            y=[opt.cost_score, opt.growth_score, opt.confidence],
-            marker_color=color,
-            marker_line_color="rgba(255,255,255,0.1)",
-            marker_line_width=1,
-            opacity=0.85,
-        ))
+    for index, option in enumerate(options):
+        fig.add_trace(
+            go.Bar(
+                name=option.name[:24],
+                x=["Cost", "Growth", "Confidence"],
+                y=[option.cost_score, option.growth_score, option.confidence],
+                marker_color=_option_color(index),
+                opacity=0.9,
+            )
+        )
 
     fig.update_layout(
         barmode="group",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(color="#9999BB", family="Inter"),
-        legend=dict(bgcolor="rgba(0,0,0,0)", bordercolor="rgba(255,255,255,0.1)", borderwidth=1),
-        xaxis=dict(gridcolor="rgba(255,255,255,0.05)", tickfont=dict(color="#9999BB")),
-        yaxis=dict(gridcolor="rgba(255,255,255,0.05)", tickfont=dict(color="#9999BB"), range=[0, 100]),
+        font=dict(color="#56607d", family="Inter"),
+        yaxis=dict(range=[0, 100], gridcolor="#edf0fb"),
+        xaxis=dict(gridcolor="#edf0fb"),
+        legend=dict(orientation="h", y=-0.22),
         height=300,
-        margin=dict(t=10, b=10, l=0, r=0),
+        margin=dict(t=6, b=58, l=0, r=0),
     )
     st.plotly_chart(fig, use_container_width=True)
 
 
 def _render_risk_panel(risk):
-    """Render risk assessment panel."""
-    overall_color = "#43D9B3" if risk.overall_risk == "Low" else "#FFC107" if risk.overall_risk == "Medium" else "#FF6584"
-
-    st.markdown(f"""
-    <div style='background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
-                border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1rem;'>
-        <span style='color: {overall_color}; font-size: 1.3rem; font-weight: 800;'>
-            Overall Risk: {risk.overall_risk} ({risk.overall_score:.0f}/100)
-        </span>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <article class="tx-result-card tx-orange-soft">
+            <span style="color:#ff7d00;font-size:12px;font-weight:900;">OVERALL RISK</span>
+            <h2 style="margin:6px 0 0;">{risk.overall_risk} · {risk.overall_score:.0f}/100</h2>
+        </article>
+        """,
+        unsafe_allow_html=True,
+    )
 
     cols = st.columns(len(risk.risks))
-    for i, r in enumerate(risk.risks):
-        color = "#43D9B3" if r.level == "Low" else "#FFC107" if r.level == "Medium" else "#FF6584"
-        with cols[i]:
-            st.markdown(f"""
-            <div style='background: rgba(255,255,255,0.03); border: 1px solid {color}30;
-                        border-radius: 10px; padding: 0.8rem; text-align: center;'>
-                <div style='color: {color}; font-weight: 700; font-size: 0.9rem;'>{r.risk_type}</div>
-                <div style='font-size: 1.5rem; font-weight: 800; color: {color};'>{r.score:.0f}</div>
-                <div style='color: #9999BB; font-size: 0.75rem;'>{r.level}</div>
-            </div>
-            """, unsafe_allow_html=True)
+    for col, item in zip(cols, risk.risks):
+        with col:
+            st.metric(item.risk_type, f"{item.score:.0f}", item.level)
 
     if risk.safer_alternatives:
-        st.markdown("**💡 Safer Alternatives:**")
-        for alt in risk.safer_alternatives[:3]:
-            st.markdown(f"- {alt}")
+        st.markdown("**Safer alternatives**")
+        for alternative in risk.safer_alternatives[:3]:
+            st.markdown(f"- {alternative}")
 
 
 def _render_scholarships(scholarships):
-    """Render scholarship cards."""
-    total = scholarships.total_found
-    st.info(f"🎓 Found {total} scholarships for **{scholarships.state}**")
-
-    tabs = st.tabs(["🏛️ Central Schemes", "🗺️ State Schemes", "🏢 Private"])
+    st.info(f"Found {scholarships.total_found} scholarships for {scholarships.state}.")
+    tabs = st.tabs(["Central", "State", "Private"])
     with tabs[0]:
-        for s in scholarships.central_schemes[:4]:
-            st.markdown(f"**{s.name}** · {s.amount} · *{s.eligibility}*")
-            st.markdown(f"[Apply Here]({s.apply_at}) | Limit: {s.income_limit}")
-            st.divider()
+        for item in scholarships.central_schemes[:4]:
+            st.markdown(f"**{item.name}** · {item.amount} · {item.eligibility}")
     with tabs[1]:
-        for s in scholarships.state_schemes[:4]:
-            st.markdown(f"**{s.name}** · {s.amount}")
-            st.markdown(f"[Apply Here]({s.apply_at})")
-            st.divider()
+        for item in scholarships.state_schemes[:4]:
+            st.markdown(f"**{item.name}** · {item.amount}")
     with tabs[2]:
-        for s in scholarships.private_scholarships[:3]:
-            st.markdown(f"**{s.name}** · {s.amount}")
-            st.markdown(f"[Apply Here]({s.apply_at})")
-            st.divider()
+        for item in scholarships.private_scholarships[:3]:
+            st.markdown(f"**{item.name}** · {item.amount}")
