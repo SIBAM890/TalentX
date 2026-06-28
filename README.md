@@ -4,7 +4,8 @@
 [![Hackathon](https://img.shields.io/badge/India%20Runs-Redrob%20AI-blue?style=flat-square)](https://github.com)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=flat-square)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-teal?style=flat-square)](https://fastapi.tiangolo.com)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.29.0-red?style=flat-square)](https://streamlit.io)
+[![React](https://img.shields.io/badge/React-18.3-blue?style=flat-square)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-5.4-purple?style=flat-square)](https://vitejs.dev)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
 > **"Not filters. Not advice. Intelligence."**
@@ -186,7 +187,7 @@ Recommendation: M.Tech in India (IIT/NIT) + placement in top product company
 | **NLP** | spaCy (en_core_web_sm) | Named Entity Recognition |
 | **Embeddings** | Sentence-BERT (all-MiniLM-L6-v2) | Semantic similarity |
 | **ML** | scikit-learn | TF-IDF fallback, scoring |
-| **Frontend** | Streamlit + Plotly | Interactive UI with charts |
+| **Frontend** | React 18 + Vite | Modern SPA with fast dev experience |
 | **Data** | JSON, TXT | Skill taxonomy, careers, scholarships |
 | **Deployment** | Docker, Render.com | Containerized production deploy |
 | **Testing** | pytest | Unit and integration tests |
@@ -217,7 +218,7 @@ talentx/
 │   ├── sample_jd.txt        # Sample Data Scientist JD
 │   └── sample_resumes/      # 10 sample candidate resumes
 ├── frontend/
-│   ├── app.py               # Main Streamlit application
+│   ├── App.jsx              # Main React application
 │   ├── components/
 │   │   ├── candidate_tab.py # DishaSetu Mode UI
 │   │   ├── recruiter_tab.py # TalentX Mode UI
@@ -279,6 +280,23 @@ python -m spacy download en_core_web_sm
 cp .env.example .env
 ```
 
+### ⚡ Quick Launch (Windows)
+
+**Option 1: One-Click Start** ✨
+```bash
+# Double-click this file in the project folder:
+START_TALENTX.bat
+```
+This will automatically:
+- Start FastAPI backend on port 8000
+- Start React frontend on port 5173
+- Open http://localhost:5173 in your browser
+
+**Option 2: PowerShell Script**
+```bash
+PowerShell -ExecutionPolicy Bypass -File start.ps1
+```
+
 ### Run Validation
 ```bash
 # Validate all data files and run smoke tests
@@ -294,14 +312,14 @@ python scripts/test_decision.py
 python scripts/test_ranking.py
 ```
 
-### Run Backend API
+### Run Backend API (Manual)
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 # API at: http://localhost:8000
 # Docs at: http://localhost:8000/docs
 ```
 
-### Run Frontend
+### Run Frontend (Manual)
 ```bash
 # React frontend
 cd frontend-react
